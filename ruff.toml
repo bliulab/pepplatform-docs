@@ -1,0 +1,9 @@
+target-version = "py310"
+line-length = 100
+indent-width = 4
+include = ["scripts/**/*.py"]
+
+[format]
+quote-style = "double"
+line-ending = "lf"
+docstring-code-format = false

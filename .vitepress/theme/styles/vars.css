@@ -1,0 +1,128 @@
+:root {
+  --vp-sidebar-width: 176px;
+
+  --pep-nav-bg-light: #2563eb;
+  --pep-nav-bg-dark: #1e40af;
+  --pep-nav-text-light: #ffffff;
+  --pep-nav-text-dark: #f8fafc;
+  --vp-nav-bg-color: var(--pep-nav-bg-light);
+}
+
+.dark {
+  --vp-nav-bg-color: var(--pep-nav-bg-dark);
+}
+
+.VPNavBar.has-sidebar {
+  background-color: var(--vp-nav-bg-color) !important;
+  backdrop-filter: none;
+}
+
+.VPNavBar:not(.has-sidebar) {
+  background-color: var(--vp-nav-bg-color) !important;
+  backdrop-filter: none;
+}
+
+.VPNavBar .title,
+.VPNavBar .VPLink,
+.VPNavBar .VPNavBarTitle,
+.VPNavBar .VPNavBarTitle .title,
+.VPNavBar .content .curtain {
+  color: var(--pep-nav-text-light) !important;
+}
+
+.dark .VPNavBar .title,
+.dark .VPNavBar .VPLink,
+.dark .VPNavBar .VPNavBarTitle,
+.dark .VPNavBar .VPNavBarTitle .title,
+.dark .VPNavBar .content .curtain {
+  color: var(--pep-nav-text-dark) !important;
+}
+
+.VPNavBar .VPNavBarMenuLink,
+.VPNavBar .VPNavBarMenuLink:hover {
+  color: var(--pep-nav-text-light) !important;
+}
+
+.dark .VPNavBar .VPNavBarMenuLink,
+.dark .VPNavBar .VPNavBarMenuLink:hover {
+  color: var(--pep-nav-text-dark) !important;
+}
+
+.VPNavBar .search .DocSearch-Button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--pep-nav-text-light);
+}
+
+.dark .VPNavBar .search .DocSearch-Button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--pep-nav-text-dark);
+}
+
+.VPNavBar .search .DocSearch-Button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Language switcher visibility on colored nav bar */
+.VPNavBar .VPNavBarTranslations .button,
+.VPNavBar .VPNavBarTranslations .text,
+.VPNavBar .VPNavBarTranslations .text-icon {
+  color: var(--pep-nav-text-light) !important;
+}
+
+.dark .VPNavBar .VPNavBarTranslations .button,
+.dark .VPNavBar .VPNavBarTranslations .text,
+.dark .VPNavBar .VPNavBarTranslations .text-icon {
+  color: var(--pep-nav-text-dark) !important;
+}
+
+.VPNavBar .VPNavBarTranslations:hover .text,
+.VPNavBar .VPNavBarTranslations .VPFlyout:hover .text {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.dark .VPNavBar .VPNavBarTranslations:hover .text,
+.dark .VPNavBar .VPNavBarTranslations .VPFlyout:hover .text {
+  color: rgba(248, 250, 252, 0.85) !important;
+}
+
+.VPNavBar .menu + .translations::before,
+.VPNavBar .menu + .appearance::before,
+.VPNavBar .menu + .social-links::before,
+.VPNavBar .translations + .appearance::before,
+.VPNavBar .appearance + .social-links::before {
+  background-color: rgba(255, 255, 255, 0.38);
+}
+
+.VPNavBar .appearance + .social-links::before {
+  margin-right: 14px;
+  margin-left: 20px;
+}
+
+.VPNavBar .social-links {
+  margin-right: 0;
+}
+
+/* Dropdown menu links must not inherit the nav-bar forced white color */
+.VPNavBar .VPMenu {
+  background-color: var(--vp-c-bg-elv) !important;
+  border-color: var(--vp-c-divider) !important;
+}
+
+.VPNavBar .VPMenu .title,
+.VPNavBar .VPMenu .link,
+.VPNavBar .VPMenu .VPLink,
+.VPNavBar .VPMenu .VPMenuLink {
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPNavBar .VPMenu .link:hover,
+.VPNavBar .VPMenu .VPLink:hover,
+.VPNavBar .VPMenu .VPMenuLink:hover {
+  color: var(--vp-c-brand-1) !important;
+}
+
+.VPNavBar .VPMenu .link.active,
+.VPNavBar .VPMenu .VPLink.active,
+.VPNavBar .VPMenu .VPMenuLink.active {
+  color: var(--vp-c-brand-1) !important;
+}

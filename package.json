@@ -1,0 +1,28 @@
+{
+  "name": "pepplatform-docs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "test:docs": "python3 -m unittest discover -s tests -v",
+    "docs:check": "python3 scripts/check_docs.py",
+    "docs:check:dist": "python3 scripts/check_docs.py --dist .vitepress/dist",
+    "gen:cli": "python3 scripts/gen_cli_ref.py && tsx scripts/gen_cli_ref_fmt.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "vitepress": "^1.5.0"
+  },
+  "description": "English and Chinese documentation for PepPlatform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bliulab/pepplatform-docs.git"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
